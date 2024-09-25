@@ -10,6 +10,6 @@ public class Word extends Vocabulary {
     // show a word.
     @Override
     public void showEntry() {
-        System.out.println(this.wordTarget + " " + this.phonetic + "/n" + this.wordExplain);
+        System.out.println(this.wordTarget + " " + this.phonetic + "\n" + this.wordExplain);
     }
 }

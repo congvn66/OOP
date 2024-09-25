@@ -28,6 +28,10 @@ public class Dictionary {
         vocabularies.remove(wordTarget.toLowerCase());
     }
 
+    public int size() {
+        return this.vocabularies.size();
+    }
+
     // show all vocab.
     public void showAll() {
         for (Vocabulary vocabulary : vocabularies.values()) {

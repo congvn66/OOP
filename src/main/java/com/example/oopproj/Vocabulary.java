@@ -12,6 +12,7 @@ public abstract class Vocabulary {
     public Vocabulary(String wordTarget, String wordExplain, String phonetic) {
         this.wordTarget = wordTarget;
         this.wordExplain = wordExplain;
+        this.phonetic = phonetic;
     }
 
     // getter.
