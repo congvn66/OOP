@@ -9,7 +9,7 @@ public class DictionaryDatabaseManagement extends DictionaryManagement{
         super(dictionary);
     }
 
-    // database stuffs
+    // database stuffs.
     public void importFromDatabase() throws SQLException {
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels", "root", "");
         Statement statement = connection.createStatement();
@@ -26,6 +26,7 @@ public class DictionaryDatabaseManagement extends DictionaryManagement{
         return;
     }
 
+    // show all words.
     @Override
     public void showAllWords() {
         this.dictionary.showAll();
