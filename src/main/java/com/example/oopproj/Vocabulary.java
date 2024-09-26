@@ -5,14 +5,14 @@ public abstract class Vocabulary {
     protected String wordTarget;
     // Vietnamese.
     protected String wordExplain;
-    // type of Vocabulary.
-    protected String wordType;
+    // phonetics
+    protected String phonetic;
 
     // constructor.
-    public Vocabulary(String wordTarget, String wordExplain, String wordType) {
+    public Vocabulary(String wordTarget, String wordExplain, String phonetic) {
         this.wordTarget = wordTarget;
         this.wordExplain = wordExplain;
-        this.wordType = wordType;
+        this.phonetic = phonetic;
     }
 
     // getter.
@@ -24,10 +24,6 @@ public abstract class Vocabulary {
         return this.wordExplain;
     }
 
-    public String getWordType() {
-        return this.wordType;
-    }
-
     // setter.
     public void setWordTarget(String wordTarget) {
         this.wordTarget = wordTarget;
@@ -37,9 +33,6 @@ public abstract class Vocabulary {
         this.wordExplain = wordExplain;
     }
 
-    public void setWordType(String wordType) {
-        this.wordType = wordType;
-    }
 
     // print stuffs.
     public abstract void showEntry();
