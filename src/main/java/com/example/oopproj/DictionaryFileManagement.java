@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
+import java.nio.file.Paths;
 public class DictionaryFileManagement extends DictionaryManagement{
 
     // constructor.
@@ -12,7 +12,7 @@ public class DictionaryFileManagement extends DictionaryManagement{
         super(dictionary);
     }
 
-    public Dictionary getDicitonary() {
+    public Dictionary getDictionary() {
         return this.dictionary;
     }
 
@@ -82,9 +82,10 @@ public class DictionaryFileManagement extends DictionaryManagement{
     public static void main(String[] args) {
         Dictionary dictionary = new Dictionary();
         DictionaryFileManagement dictionaryFileManagement = new DictionaryFileManagement(dictionary);
-        dictionaryFileManagement.importFromFile("C:/Users/Cong/Desktop/OOP/src/main/resources/data/english-vietnamese.txt");
-        System.out.println(dictionaryFileManagement.getDicitonary().size());
-        dictionaryFileManagement.getDicitonary().getVocabulary("abetment").showEntry();
-        dictionaryFileManagement.getDicitonary().getVocabulary("satellite").showEntry();
+        String absolutePath = Paths.get("src/main/resources/data/english-vietnamese.txt").toAbsolutePath().toString();
+        System.out.println(absolutePath);
+        dictionaryFileManagement.importFromFile(absolutePath);
+        System.out.println(dictionaryFileManagement.getDictionary().size());
+        dictionaryFileManagement.getDictionary().getVocabulary("conglomerate").showEntry();
     }
 }
